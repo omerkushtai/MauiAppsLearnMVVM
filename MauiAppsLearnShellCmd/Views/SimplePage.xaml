@@ -18,7 +18,8 @@
         <Label 
             VerticalOptions="Center" 
             HorizontalOptions="Center"       
-            Text="I am a simple label" />
+            Text="I am a simple label" 
+            x:Name="MyLabel" />
 
         <!--<Label 
             VerticalOptions="Center" 

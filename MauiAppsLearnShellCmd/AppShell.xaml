@@ -1,40 +1,23 @@
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="MauiAppShellSampleCmd.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Views"
-    Title="MauiAppShellSampleCmd"
-    FlyoutBehavior="Flyout">
-    <!-- 1. דף ה-Welcome מוגדר ראשון כדי שייפתח בהפעלה, אך מוסתר מהתפריט הצדדי -->
-        <FlyoutItem Title="Welcome" Icon="appicon.png">
-            <ShellContent
+    Title="MVVMBBasic">
+
+    <FlyoutItem Title="Welcome">
+        <ShellContent
             Title="Welcome"
-            ContentTemplate="{DataTemplate views:WelcomePage}"
-            Route="WelcomePage" />
-        </FlyoutItem>
+            Route="Welcome"
+            ContentTemplate="{DataTemplate views:WelcomePage}"/>
+    </FlyoutItem>
 
-        <!-- 2. שאר הדפים - מוצגים בתפריט ויופיע בהם כפתור ההמבורגר כראוי -->
-        <FlyoutItem Title="About" Icon="appicon.png">
-            <ShellContent
-            Title="About"
-            ContentTemplate="{DataTemplate views:AboutPage}"
-            Route="AboutPage" />
-        </FlyoutItem>
-
-        <FlyoutItem Title="Click Counter" Icon="appicon.png">
-            <ShellContent
-            Title="Click Counter"
-            ContentTemplate="{DataTemplate views:ClickCounterPage}"
-            Route="ClickCounterPage" />
-        </FlyoutItem>
-
-        <FlyoutItem Title="Contact" Icon="appicon.png">
-            <ShellContent
-            Title="Contact"
-            ContentTemplate="{DataTemplate views:ContactPage}"
-            Route="ContactPage" />
-        </FlyoutItem>
-
-    </Shell>
-
+    <FlyoutItem Title="Calculator Age">
+        <ShellContent
+            Title="Calculator Age"
+            Route="CalcAge"
+            ContentTemplate="{DataTemplate views:CalcAgePage}"/>
+    </FlyoutItem>
+ </Shell>

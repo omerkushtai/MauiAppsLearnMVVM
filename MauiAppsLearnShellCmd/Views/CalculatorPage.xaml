@@ -1,0 +1,85 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ViewModels"
+    x:Class="Views.CalculatorPage"
+    x:DataType="vm:CalculatorViewModel"
+    Title="{Binding Title}">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Label
+            Text="מחשבון פשוט"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"/>
+
+        <Entry
+            Text="{Binding Number1}"
+            Placeholder="הכנס מספר ראשון"
+            Keyboard="Numeric"
+            HeightRequest="48"/>
+
+        <Entry
+            Text="{Binding Number2}"
+            Placeholder="הכנס מספר שני"
+            Keyboard="Numeric"
+            HeightRequest="48"/>
+
+        <Grid
+            ColumnDefinitions="*,*,*,*"
+            ColumnSpacing="10"
+            HeightRequest="50">
+
+            <Button
+                Grid.Column="0"
+                Text="+"
+                Command="{Binding AddCommand}"/>
+
+            <Button
+                Grid.Column="1"
+                Text="-"
+                Command="{Binding SubtractCommand}"/>
+
+            <Button
+                Grid.Column="2"
+                Text="*"
+                Command="{Binding MultiplyCommand}"/>
+
+            <Button
+                Grid.Column="3"
+                Text="/"
+                Command="{Binding DivideCommand}"/>
+
+        </Grid>
+
+        <Border
+            BackgroundColor="#F0F0F0"
+            Padding="15"
+            Margin="0,10,0,0">
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5">
+
+                <Label
+                    Text="התוצאה היא:"
+                    FontSize="20"
+                    FontAttributes="Bold"/>
+
+                <Label
+                    Text="{Binding Result}"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="Green"/>
+
+            </HorizontalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

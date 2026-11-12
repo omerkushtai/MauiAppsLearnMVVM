@@ -7,34 +7,17 @@ namespace ViewModels
 {
     public class WelcomeViewModel: BaseViewModel
     {
-        public ICommand NavigateToClickCounterCommand { get; }
-
-        public ICommand NavigateToAboutCommand { get; }
-
+        public ICommand GoToAgeCommand { get; }
+        public ICommand GoToCalculatorCommand { get; }
         public WelcomeViewModel()
         {
-            //// נווט לדף מונה לחיצות
-            //NavigateToClickCounterCommand = new Command(async () => await Shell.Current.GoToAsync("ClickCounterPage"));
+            Title = "Welcome";
 
-            //// נווט לדף אודות
-            //NavigateToAboutCommand = new Command(async () => await Shell.Current.GoToAsync("AboutPage"));
+            GoToAgeCommand = new Command(async () =>
+                await Shell.Current.GoToAsync("//CalcAge"));
 
-            // נווט לדף הבית + שחרור ההמבורגר
-            NavigateToClickCounterCommand = new Command(async () =>
-            {
-                //Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout; // 1. משחרר את החסימה
-                await Shell.Current.GoToAsync("//ClickCounterPage");          // 2. ניווט מוחלט (Absolute)
-            });
-
-            // נווט לדף אודות + שחרור ההמבורגר
-            NavigateToAboutCommand = new Command(async () =>
-            {
-                //Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout; // 1. משחרר את החסימה
-                await Shell.Current.GoToAsync("//AboutPage");         // 2. ניווט מוחלט (Absolute)
-            });
-
-
-            Title = "Welcome Page";
+            GoToCalculatorCommand = new Command(async () =>
+                await Shell.Current.GoToAsync("//CalculatorPage"));
         }
 
     }
