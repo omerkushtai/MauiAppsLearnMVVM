@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="MVVMBBasic.AppShell"
@@ -11,21 +10,21 @@
         <ShellContent
             Title="Welcome"
             Route="Welcome"
-            ContentTemplate="{DataTemplate Views:WelcomePage}"/>
+            ContentTemplate="{DataTemplate views:WelcomePage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="Calculator Age">
         <ShellContent
             Title="Calculator Age"
             Route="CalcAge"
-            ContentTemplate="{DataTemplate Views:CalcAgePage}"/>
+            ContentTemplate="{DataTemplate views:CalcAgePage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="Math Calculator">
         <ShellContent
             Title="Math Calculator"
             Route="CalculatorPage"
-            ContentTemplate="{DataTemplate Views:CalculatorPage}"/>
+            ContentTemplate="{DataTemplate views:CalculatorPage}"/>
     </FlyoutItem>
 
 </Shell>
