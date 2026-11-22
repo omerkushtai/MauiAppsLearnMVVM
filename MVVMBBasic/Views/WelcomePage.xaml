@@ -28,6 +28,9 @@
         <Button
             Text="מחשבון טמפרטורה"
             Command="{Binding GoToTemperatureCalculatorCommand}"/>
+        <Button
+            Text="מחשבון טמפרטורה"
+            Command="{Binding GoToCurrencyCalculatorCommand}"/>
 
     </VerticalStackLayout>
 </ContentPage>
