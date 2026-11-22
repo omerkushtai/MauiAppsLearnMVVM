@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:ViewModels"
+    x:Class="Views.TemperatureCalculatorPage"
+    Title="Temperature Calculator">
+
+    <ContentPage.BindingContext>
+        <vm:TemperatureCalculatorViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Label
+            Text="Temperature Calculator"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Enter a temperature:"
+            FontSize="18" />
+
+        <Entry
+            Placeholder="Enter temperature"
+            Keyboard="Numeric"
+            Text="{Binding Temperature}" />
+
+        <Button
+            Text="Fahrenheit to Celsius"
+            Command="{Binding ToCelsiusCommand}" />
+
+        <Button
+            Text="Celsius to Fahrenheit"
+            Command="{Binding ToFahrenheitCommand}" />
+
+        <Label
+            Text="{Binding Result}"
+            FontSize="22"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Back to Welcome"
+            Command="{Binding WelcomeCommand}"
+            BackgroundColor="Gray" />
+
+    </VerticalStackLayout>
+</ContentPage>

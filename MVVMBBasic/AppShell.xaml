@@ -26,6 +26,13 @@
             Route="CalculatorPage"
             ContentTemplate="{DataTemplate views:CalculatorPage}"/>
     </FlyoutItem>
+    <FlyoutItem Title="Temp Calculator">
+        <ShellContent
+            Title="Temp Calculator"
+            Route="TemperatureCalculatorPage"
+            ContentTemplate="{DataTemplate views:TemperatureCalculatorPage}"/>
+    </FlyoutItem>
+
 
 </Shell>
 

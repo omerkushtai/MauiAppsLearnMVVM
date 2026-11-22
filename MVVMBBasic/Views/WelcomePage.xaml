@@ -25,6 +25,9 @@
         <Button
             Text="מחשבון מתמטי"
             Command="{Binding GoToCalculatorCommand}"/>
+        <Button
+            Text="מחשבון טמפרטורה"
+            Command="{Binding GoToTemperatureCalculatorCommand}"/>
 
     </VerticalStackLayout>
 </ContentPage>
